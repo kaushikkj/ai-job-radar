@@ -1,0 +1,1452 @@
+[
+  {
+    "name": "Microsoft",
+    "slug": "microsoft",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://careers.microsoft.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Google",
+    "slug": "google",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.google.com/about/careers/applications/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Amazon",
+    "slug": "amazon",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.amazon.jobs/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "AWS",
+    "slug": "aws",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.amazon.jobs/en/teams/amazon-web-services",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Apple",
+    "slug": "apple",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.apple.com/careers/in/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Meta",
+    "slug": "meta",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.metacareers.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "NVIDIA",
+    "slug": "nvidia",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Oracle",
+    "slug": "oracle",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.oracle.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "IBM",
+    "slug": "ibm",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.ibm.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cisco",
+    "slug": "cisco",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://jobs.cisco.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Broadcom",
+    "slug": "broadcom",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.broadcom.com/company/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Intel",
+    "slug": "intel",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://jobs.intel.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Qualcomm",
+    "slug": "qualcomm",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.qualcomm.com/company/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Adobe",
+    "slug": "adobe",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.adobe.com/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Salesforce",
+    "slug": "salesforce",
+    "category": "SaaS",
+    "priority": 95,
+    "career_url": "https://careers.salesforce.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Databricks",
+    "slug": "databricks",
+    "category": "Technology",
+    "priority": 100,
+    "career_url": "https://www.databricks.com/company/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Snowflake",
+    "slug": "snowflake",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://careers.snowflake.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Uber",
+    "slug": "uber",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.uber.com/us/en/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Atlassian",
+    "slug": "atlassian",
+    "category": "SaaS",
+    "priority": 95,
+    "career_url": "https://www.atlassian.com/company/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "ServiceNow",
+    "slug": "servicenow",
+    "category": "SaaS",
+    "priority": 95,
+    "career_url": "https://www.servicenow.com/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cloudflare",
+    "slug": "cloudflare",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.cloudflare.com/careers/jobs/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "DigitalOcean",
+    "slug": "digitalocean",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.digitalocean.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "MongoDB",
+    "slug": "mongodb",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.mongodb.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Confluent",
+    "slug": "confluent",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.confluent.io/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Elastic",
+    "slug": "elastic",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.elastic.co/about/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Red Hat",
+    "slug": "red-hat",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.redhat.com/en/jobs",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Datadog",
+    "slug": "datadog",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://careers.datadoghq.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Dynatrace",
+    "slug": "dynatrace",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.dynatrace.com/company/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "New Relic",
+    "slug": "new-relic",
+    "category": "Technology",
+    "priority": 85,
+    "career_url": "https://newrelic.com/about/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "PagerDuty",
+    "slug": "pagerduty",
+    "category": "Technology",
+    "priority": 85,
+    "career_url": "https://careers.pagerduty.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "HashiCorp",
+    "slug": "hashicorp",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.hashicorp.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Nutanix",
+    "slug": "nutanix",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.nutanix.com/company/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "NetApp",
+    "slug": "netapp",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://careers.netapp.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Dell Technologies",
+    "slug": "dell-technologies",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://jobs.dell.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Palo Alto Networks",
+    "slug": "palo-alto-networks",
+    "category": "Cybersecurity",
+    "priority": 90,
+    "career_url": "https://jobs.paloaltonetworks.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "CrowdStrike",
+    "slug": "crowdstrike",
+    "category": "Cybersecurity",
+    "priority": 90,
+    "career_url": "https://www.crowdstrike.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Zscaler",
+    "slug": "zscaler",
+    "category": "Cybersecurity",
+    "priority": 90,
+    "career_url": "https://www.zscaler.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "JPMorgan Chase",
+    "slug": "jpmorgan-chase",
+    "category": "BFSI GCC",
+    "priority": 100,
+    "career_url": "https://www.jpmorganchase.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Goldman Sachs",
+    "slug": "goldman-sachs",
+    "category": "BFSI GCC",
+    "priority": 95,
+    "career_url": "https://www.goldmansachs.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Morgan Stanley",
+    "slug": "morgan-stanley",
+    "category": "BFSI GCC",
+    "priority": 95,
+    "career_url": "https://www.morganstanley.com/people-opportunities",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Bank of America",
+    "slug": "bank-of-america",
+    "category": "BFSI GCC",
+    "priority": 95,
+    "career_url": "https://careers.bankofamerica.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Wells Fargo",
+    "slug": "wells-fargo",
+    "category": "BFSI GCC",
+    "priority": 95,
+    "career_url": "https://www.wellsfargojobs.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Citi",
+    "slug": "citi",
+    "category": "BFSI GCC",
+    "priority": 95,
+    "career_url": "https://jobs.citi.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "HSBC",
+    "slug": "hsbc",
+    "category": "BFSI GCC",
+    "priority": 90,
+    "career_url": "https://www.hsbc.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Barclays",
+    "slug": "barclays",
+    "category": "BFSI GCC",
+    "priority": 90,
+    "career_url": "https://home.barclays/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "UBS",
+    "slug": "ubs",
+    "category": "BFSI GCC",
+    "priority": 90,
+    "career_url": "https://www.ubs.com/global/en/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Mastercard",
+    "slug": "mastercard",
+    "category": "Fintech",
+    "priority": 95,
+    "career_url": "https://careers.mastercard.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Visa",
+    "slug": "visa",
+    "category": "Fintech",
+    "priority": 95,
+    "career_url": "https://corporate.visa.com/en/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "American Express",
+    "slug": "american-express",
+    "category": "Fintech",
+    "priority": 90,
+    "career_url": "https://www.americanexpress.com/en-us/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "PayPal",
+    "slug": "paypal",
+    "category": "Fintech",
+    "priority": 90,
+    "career_url": "https://www.paypal.com/us/webapps/mpp/jobs",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Wise",
+    "slug": "wise",
+    "category": "Fintech",
+    "priority": 100,
+    "career_url": "https://wise.jobs/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "category": "Fintech",
+    "priority": 95,
+    "career_url": "https://stripe.com/jobs",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Fidelity",
+    "slug": "fidelity",
+    "category": "BFSI GCC",
+    "priority": 85,
+    "career_url": "https://jobs.fidelity.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Charles Schwab",
+    "slug": "charles-schwab",
+    "category": "BFSI GCC",
+    "priority": 90,
+    "career_url": "https://www.schwabjobs.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Walmart Global Tech",
+    "slug": "walmart-global-tech",
+    "category": "Retail GCC",
+    "priority": 95,
+    "career_url": "https://careers.walmart.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Flipkart",
+    "slug": "flipkart",
+    "category": "Technology",
+    "priority": 95,
+    "career_url": "https://www.flipkartcareers.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Meesho",
+    "slug": "meesho",
+    "category": "Technology",
+    "priority": 85,
+    "career_url": "https://meesho.io/jobs",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Swiggy",
+    "slug": "swiggy",
+    "category": "Technology",
+    "priority": 85,
+    "career_url": "https://careers.swiggy.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "PhonePe",
+    "slug": "phonepe",
+    "category": "Fintech",
+    "priority": 90,
+    "career_url": "https://www.phonepe.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Razorpay",
+    "slug": "razorpay",
+    "category": "Fintech",
+    "priority": 90,
+    "career_url": "https://razorpay.com/jobs/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Freshworks",
+    "slug": "freshworks",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.freshworks.com/company/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Zoho",
+    "slug": "zoho",
+    "category": "SaaS",
+    "priority": 85,
+    "career_url": "https://www.zoho.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Postman",
+    "slug": "postman",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.postman.com/company/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "BrowserStack",
+    "slug": "browserstack",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.browserstack.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Chargebee",
+    "slug": "chargebee",
+    "category": "SaaS",
+    "priority": 85,
+    "career_url": "https://www.chargebee.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Okta",
+    "slug": "okta",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.okta.com/company/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Workday",
+    "slug": "workday",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.workday.com/en-us/company/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Twilio",
+    "slug": "twilio",
+    "category": "SaaS",
+    "priority": 85,
+    "career_url": "https://www.twilio.com/company/jobs",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Zoom",
+    "slug": "zoom",
+    "category": "SaaS",
+    "priority": 85,
+    "career_url": "https://careers.zoom.us/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Intuit",
+    "slug": "intuit",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.intuit.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "ServiceTitan",
+    "slug": "servicetitan",
+    "category": "SaaS",
+    "priority": 90,
+    "career_url": "https://www.servicetitan.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Thomson Reuters",
+    "slug": "thomson-reuters",
+    "category": "GCC",
+    "priority": 95,
+    "career_url": "https://www.thomsonreuters.com/en/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Deloitte",
+    "slug": "deloitte",
+    "category": "GCC",
+    "priority": 85,
+    "career_url": "https://www.deloitte.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "EY",
+    "slug": "ey",
+    "category": "GCC",
+    "priority": 85,
+    "career_url": "https://www.ey.com/en_in/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Accenture",
+    "slug": "accenture",
+    "category": "GCC",
+    "priority": 85,
+    "career_url": "https://www.accenture.com/in-en/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Siemens",
+    "slug": "siemens",
+    "category": "GCC",
+    "priority": 85,
+    "career_url": "https://www.siemens.com/global/en/company/jobs.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Honeywell",
+    "slug": "honeywell",
+    "category": "GCC",
+    "priority": 90,
+    "career_url": "https://careers.honeywell.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Schneider Electric",
+    "slug": "schneider-electric",
+    "category": "GCC",
+    "priority": 85,
+    "career_url": "https://www.se.com/ww/en/about-us/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Boeing",
+    "slug": "boeing",
+    "category": "GCC",
+    "priority": 80,
+    "career_url": "https://jobs.boeing.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "GE HealthCare",
+    "slug": "ge-healthcare",
+    "category": "Healthcare",
+    "priority": 90,
+    "career_url": "https://jobs.gecareers.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Amgen",
+    "slug": "amgen",
+    "category": "Healthcare",
+    "priority": 100,
+    "career_url": "https://careers.amgen.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Bristol Myers Squibb",
+    "slug": "bristol-myers-squibb",
+    "category": "Pharma",
+    "priority": 95,
+    "career_url": "https://careers.bms.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Elevance Health",
+    "slug": "elevance-health",
+    "category": "Healthcare GCC",
+    "priority": 95,
+    "career_url": "https://careers.elevancehealth.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Medtronic",
+    "slug": "medtronic",
+    "category": "MedTech",
+    "priority": 95,
+    "career_url": "https://jobs.medtronic.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Novartis",
+    "slug": "novartis",
+    "category": "Pharma",
+    "priority": 100,
+    "career_url": "https://www.novartis.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Optum",
+    "slug": "optum",
+    "category": "Healthcare GCC",
+    "priority": 100,
+    "career_url": "https://careers.unitedhealthgroup.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "UnitedHealth Group",
+    "slug": "unitedhealth-group",
+    "category": "Healthcare GCC",
+    "priority": 95,
+    "career_url": "https://careers.unitedhealthgroup.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Sanofi",
+    "slug": "sanofi",
+    "category": "Pharma GCC",
+    "priority": 95,
+    "career_url": "https://jobs.sanofi.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cohere Health",
+    "slug": "cohere-health",
+    "category": "Healthcare",
+    "priority": 90,
+    "career_url": "https://www.coherehealth.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "HCA Healthcare",
+    "slug": "hca-healthcare",
+    "category": "Healthcare",
+    "priority": 85,
+    "career_url": "https://careers.hcahealthcare.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Siemens Healthineers",
+    "slug": "siemens-healthineers",
+    "category": "MedTech",
+    "priority": 90,
+    "career_url": "https://www.siemens-healthineers.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Thermo Fisher Scientific",
+    "slug": "thermo-fisher-scientific",
+    "category": "Healthcare",
+    "priority": 90,
+    "career_url": "https://jobs.thermofisher.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Pfizer",
+    "slug": "pfizer",
+    "category": "Pharma",
+    "priority": 90,
+    "career_url": "https://www.pfizer.com/about/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Johnson & Johnson",
+    "slug": "johnson-and-johnson",
+    "category": "Healthcare",
+    "priority": 90,
+    "career_url": "https://www.careers.jnj.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "AstraZeneca",
+    "slug": "astrazeneca",
+    "category": "Pharma",
+    "priority": 90,
+    "career_url": "https://careers.astrazeneca.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Roche",
+    "slug": "roche",
+    "category": "Healthcare",
+    "priority": 90,
+    "career_url": "https://careers.roche.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "IQVIA",
+    "slug": "iqvia",
+    "category": "Healthcare",
+    "priority": 90,
+    "career_url": "https://jobs.iqvia.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cigna",
+    "slug": "cigna",
+    "category": "Healthcare",
+    "priority": 85,
+    "career_url": "https://jobs.cigna.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "CVS Health",
+    "slug": "cvs-health",
+    "category": "Healthcare",
+    "priority": 85,
+    "career_url": "https://jobs.cvshealth.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Wolters Kluwer",
+    "slug": "wolters-kluwer",
+    "category": "Healthcare/Enterprise",
+    "priority": 85,
+    "career_url": "https://careers.wolterskluwer.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "RELX",
+    "slug": "relx",
+    "category": "Enterprise",
+    "priority": 85,
+    "career_url": "https://www.relx.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Philips",
+    "slug": "philips",
+    "category": "MedTech",
+    "priority": 90,
+    "career_url": "https://www.careers.philips.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "JLL",
+    "slug": "jll",
+    "category": "GCC",
+    "priority": 85,
+    "career_url": "https://www.jll.com/en/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "American Airlines",
+    "slug": "american-airlines",
+    "category": "GCC",
+    "priority": 80,
+    "career_url": "https://jobs.aa.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "T-Mobile",
+    "slug": "t-mobile",
+    "category": "GCC",
+    "priority": 80,
+    "career_url": "https://www.t-mobile.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Vanguard",
+    "slug": "vanguard",
+    "category": "BFSI GCC",
+    "priority": 85,
+    "career_url": "https://www.vanguardjobs.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "FactSet",
+    "slug": "factset",
+    "category": "BFSI GCC",
+    "priority": 85,
+    "career_url": "https://www.factset.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Micron",
+    "slug": "micron",
+    "category": "Technology GCC",
+    "priority": 90,
+    "career_url": "https://careers.micron.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Garmin",
+    "slug": "garmin",
+    "category": "Technology GCC",
+    "priority": 80,
+    "career_url": "https://careers.garmin.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "LPL Financial India",
+    "slug": "lpl-financial-india",
+    "category": "BFSI GCC",
+    "priority": 100,
+    "career_url": "https://careers.lplfinancial.in/in/en/search-results",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Electronic Arts",
+    "slug": "electronic-arts",
+    "category": "Technology",
+    "priority": 90,
+    "career_url": "https://www.ea.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "CIBC",
+    "slug": "cibc",
+    "category": "BFSI GCC",
+    "priority": 90,
+    "career_url": "https://www.cibc.com/en/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "McDonald's",
+    "slug": "mcdonalds",
+    "category": "Technology / GCC",
+    "priority": 85,
+    "career_url": "https://careers.mcdonalds.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Lloyds Technology Centre",
+    "slug": "lloyds-technology-centre",
+    "category": "BFSI GCC",
+    "priority": 95,
+    "career_url": "https://www.lloydsbankinggroup.com/careers/technology-and-data.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Marriott Technology Accelerator",
+    "slug": "marriott-technology-accelerator",
+    "category": "Technology / GCC",
+    "priority": 90,
+    "career_url": "https://careers.marriott.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "HighRadius",
+    "slug": "highradius",
+    "category": "Product / GCC",
+    "priority": 92,
+    "career_url": "https://www.highradius.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Darwinbox",
+    "slug": "darwinbox",
+    "category": "Product / GCC",
+    "priority": 92,
+    "career_url": "https://darwinbox.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Zenoti",
+    "slug": "zenoti",
+    "category": "Product / GCC",
+    "priority": 90,
+    "career_url": "https://www.zenoti.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Keka",
+    "slug": "keka",
+    "category": "Product / GCC",
+    "priority": 88,
+    "career_url": "https://www.keka.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Pega",
+    "slug": "pega",
+    "category": "Product / GCC",
+    "priority": 88,
+    "career_url": "https://www.pega.com/about/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "AMD",
+    "slug": "amd",
+    "category": "Technology GCC",
+    "priority": 92,
+    "career_url": "https://www.amd.com/en/corporate/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Synopsys",
+    "slug": "synopsys",
+    "category": "Technology GCC",
+    "priority": 90,
+    "career_url": "https://www.synopsys.com/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cadence Design Systems",
+    "slug": "cadence-design-systems",
+    "category": "Technology GCC",
+    "priority": 90,
+    "career_url": "https://www.cadence.com/en_US/home/company/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cyient",
+    "slug": "cyient",
+    "category": "Technology / GCC",
+    "priority": 88,
+    "career_url": "https://www.cyient.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "ValueLabs",
+    "slug": "valuelabs",
+    "category": "Technology / GCC",
+    "priority": 88,
+    "career_url": "https://www.valuelabs.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Persistent Systems",
+    "slug": "persistent-systems",
+    "category": "Technology / GCC",
+    "priority": 88,
+    "career_url": "https://www.persistent.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Nagarro",
+    "slug": "nagarro",
+    "category": "Technology / GCC",
+    "priority": 85,
+    "career_url": "https://www.nagarro.com/en/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "EPAM Systems",
+    "slug": "epam-systems",
+    "category": "Technology / GCC",
+    "priority": 88,
+    "career_url": "https://www.epam.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Thoughtworks",
+    "slug": "thoughtworks",
+    "category": "Technology / Product",
+    "priority": 86,
+    "career_url": "https://www.thoughtworks.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Mphasis",
+    "slug": "mphasis",
+    "category": "Technology / GCC",
+    "priority": 84,
+    "career_url": "https://www.mphasis.com/home/careers.html",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "FIS",
+    "slug": "fis",
+    "category": "BFSI GCC",
+    "priority": 90,
+    "career_url": "https://www.fisglobal.com/en/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Finastra",
+    "slug": "finastra",
+    "category": "BFSI Product / GCC",
+    "priority": 88,
+    "career_url": "https://www.finastra.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Experian",
+    "slug": "experian",
+    "category": "BFSI / GCC",
+    "priority": 88,
+    "career_url": "https://www.experian.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "S&P Global",
+    "slug": "sp-global",
+    "category": "BFSI / GCC",
+    "priority": 90,
+    "career_url": "https://www.spglobal.com/en/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "ADP",
+    "slug": "adp",
+    "category": "Technology / GCC",
+    "priority": 88,
+    "career_url": "https://workforcenow.adp.com/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Phenom",
+    "slug": "phenom",
+    "category": "Product / GCC",
+    "priority": 90,
+    "career_url": "https://www.phenom.com/company/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Innominds",
+    "slug": "innominds",
+    "category": "Product / GCC",
+    "priority": 84,
+    "career_url": "https://www.innominds.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Skyroot Aerospace",
+    "slug": "skyroot-aerospace",
+    "category": "Product / Deep Tech",
+    "priority": 82,
+    "career_url": "https://www.skyroot.in/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Cognite",
+    "slug": "cognite",
+    "category": "Product / Technology",
+    "priority": 82,
+    "career_url": "https://www.cognite.ai/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "HighLevel",
+    "slug": "highlevel",
+    "category": "Product / SaaS",
+    "priority": 82,
+    "career_url": "https://www.gohighlevel.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "NCR Voyix",
+    "slug": "ncr-voyix",
+    "category": "Technology / GCC",
+    "priority": 84,
+    "career_url": "https://www.ncrvoyix.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Qualys",
+    "slug": "qualys",
+    "category": "Cybersecurity / GCC",
+    "priority": 84,
+    "career_url": "https://www.qualys.com/company/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Mindtickle",
+    "slug": "mindtickle",
+    "category": "Product / SaaS",
+    "priority": 84,
+    "career_url": "https://www.mindtickle.com/company/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Darwinbox Labs",
+    "slug": "darwinbox-labs",
+    "category": "Product / GCC",
+    "priority": 82,
+    "career_url": "https://darwinbox.com/careers",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  },
+  {
+    "name": "Incedo",
+    "slug": "incedo",
+    "category": "Technology / GCC",
+    "priority": 82,
+    "career_url": "https://www.incedoinc.com/careers/",
+    "source_type": "generic",
+    "adapter_config": {},
+    "enabled": true
+  }
+]
