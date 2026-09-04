@@ -31,10 +31,11 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Update Alpine security packages and remove npm cache.
+# Update Alpine security packages and remove unnecessary package-manager files.
 RUN apk update && \
     apk upgrade --no-cache && \
-    rm -rf /root/.npm /root/.cache
+    rm -rf /root/.npm /root/.cache /usr/local/lib/node_modules/npm \
+           /usr/local/bin/npm /usr/local/bin/npx
 
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next ./.next
@@ -42,4 +43,4 @@ COPY --from=deps /app/node_modules ./node_modules
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["node", "node_modules/next/dist/bin/next", "start"]
