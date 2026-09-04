@@ -1,14 +1,156 @@
 import { useEffect, useMemo, useState } from "react";
 import { API, Layout } from "../components/Layout";
 
-const CATEGORY_OPTIONS = ["All", "GCC", "Technology", "Product", "BFSI", "Healthcare", "Pharma", "MedTech"];
+const CATEGORY_OPTIONS = [
+  "All",
+  "GCC",
+  "Technology",
+  "Product",
+  "BFSI",
+  "Healthcare",
+  "Pharma",
+  "MedTech",
+];
 
 export default function Companies() {
-  const [companies, setCompanies] = useState([]), [filter, setFilter] = useState(""), [category, setCategory] = useState("All"), [showEnabled, setShowEnabled] = useState("all"), [loading, setLoading] = useState(true);
-  async function load(){setLoading(true);try{const r=await fetch(`${API}/companies`,{cache:"no-store"});if(r.ok)setCompanies(await r.json())}finally{setLoading(false)}}
-  async function toggle(company){await fetch(`${API}/companies/${company.id}?enabled=${!company.enabled}`,{method:"PATCH"});load()}
-  useEffect(()=>{load()},[]);
-  const visible=useMemo(()=>companies.filter(c=>`${c.name} ${c.category}`.toLowerCase().includes(filter.toLowerCase())&&(category==="All"||(c.category||"").toLowerCase().includes(category.toLowerCase()))&&(showEnabled==="all"||(showEnabled==="enabled"?c.enabled:!c.enabled))),[companies,filter,category,showEnabled]);
-  const enabledCount=companies.filter(c=>c.enabled).length;
-  return <Layout scanState={{}} onScan={()=>{}}><section className="page companies-page"><div className="page-heading companies-heading"><div><div className="eyebrow">WATCHLIST</div><h1>Companies</h1><p>Hyderabad-first employers, GCCs and product companies monitored by your radar.</p></div><div className="companies-summary"><div><b>{companies.length}</b><span>Total</span></div><div><b>{enabledCount}</b><span>Monitoring</span></div><div><b>{companies.length-enabledCount}</b><span>Paused</span></div></div></div><div className="company-toolbar panel"><div className="company-search"><span>⌕</span><input placeholder="Search companies..." value={filter} onChange={e=>setFilter(e.target.value)}/></div><div className="company-filters"><select value={category} onChange={e=>setCategory(e.target.value)}>{CATEGORY_OPTIONS.map(x=><option key={x}>{x}</option>)}</select><select value={showEnabled} onChange={e=>setShowEnabled(e.target.value)}><option value="all">All status</option><option value="enabled">Monitoring</option><option value="disabled">Paused</option></select><span className="result-count">{visible.length} shown</span></div></div>{loading?<div className="empty"><h3>Loading companies…</h3></div>:<div className="company-grid polished-company-grid">{visible.map(c=><article className="company-card panel" key={c.id}><div className="company-card-top"><div className="company-logo">{c.name.slice(0,2).toUpperCase()}</div><div className="company-info"><h3>{c.name}</h3><div className="company-badges"><span>{c.category}</span><span>Priority {c.priority}</span></div></div><span className={`monitor-dot ${c.enabled?"on":"off"}`}>{c.enabled?"LIVE":"PAUSED"}</span></div><div className="company-url">{c.career_url}</div><div className="company-card-bottom"><span>{c.enabled?"Included in scanner":"Excluded from scanner"}</span><button className={c.enabled?"secondary":"primary"} onClick={()=>toggle(c)}>{c.enabled?"Pause monitoring":"Enable monitoring"}</button></div></article>)}</div>}</section></Layout>;
+  const [companies, setCompanies] = useState([]),
+    [filter, setFilter] = useState(""),
+    [category, setCategory] = useState("All"),
+    [showEnabled, setShowEnabled] = useState("all"),
+    [loading, setLoading] = useState(true);
+  async function load() {
+    setLoading(true);
+    try {
+      const r = await fetch(`${API}/companies`, { cache: "no-store" });
+      if (r.ok) setCompanies(await r.json());
+    } finally {
+      setLoading(false);
+    }
+  }
+  async function toggle(company) {
+    await fetch(`${API}/companies/${company.id}?enabled=${!company.enabled}`, {
+      method: "PATCH",
+    });
+    load();
+  }
+  useEffect(() => {
+    load();
+  }, []);
+  const visible = useMemo(
+    () =>
+      companies.filter(
+        (c) =>
+          `${c.name} ${c.category}`
+            .toLowerCase()
+            .includes(filter.toLowerCase()) &&
+          (category === "All" ||
+            (c.category || "")
+              .toLowerCase()
+              .includes(category.toLowerCase())) &&
+          (showEnabled === "all" ||
+            (showEnabled === "enabled" ? c.enabled : !c.enabled)),
+      ),
+    [companies, filter, category, showEnabled],
+  );
+  const enabledCount = companies.filter((c) => c.enabled).length;
+  return (
+    <Layout scanState={{}} onScan={() => {}}>
+      <section className="page companies-page">
+        <div className="page-heading companies-heading">
+          <div>
+            <div className="eyebrow">WATCHLIST</div>
+            <h1>Companies</h1>
+            <p>
+              Hyderabad-first employers, GCCs and product companies monitored by
+              your radar.
+            </p>
+          </div>
+          <div className="companies-summary">
+            <div>
+              <b>{companies.length}</b>
+              <span>Total</span>
+            </div>
+            <div>
+              <b>{enabledCount}</b>
+              <span>Monitoring</span>
+            </div>
+            <div>
+              <b>{companies.length - enabledCount}</b>
+              <span>Paused</span>
+            </div>
+          </div>
+        </div>
+        <div className="company-toolbar panel">
+          <div className="company-search">
+            <span>⌕</span>
+            <input
+              placeholder="Search companies..."
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            />
+          </div>
+          <div className="company-filters">
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              {CATEGORY_OPTIONS.map((x) => (
+                <option key={x}>{x}</option>
+              ))}
+            </select>
+            <select
+              value={showEnabled}
+              onChange={(e) => setShowEnabled(e.target.value)}
+            >
+              <option value="all">All status</option>
+              <option value="enabled">Monitoring</option>
+              <option value="disabled">Paused</option>
+            </select>
+            <span className="result-count">{visible.length} shown</span>
+          </div>
+        </div>
+        {loading ? (
+          <div className="empty">
+            <h3>Loading companies…</h3>
+          </div>
+        ) : (
+          <div className="company-grid polished-company-grid">
+            {visible.map((c) => (
+              <article className="company-card panel" key={c.id}>
+                <div className="company-card-top">
+                  <div className="company-logo">
+                    {c.name.slice(0, 2).toUpperCase()}
+                  </div>
+                  <div className="company-info">
+                    <h3>{c.name}</h3>
+                    <div className="company-badges">
+                      <span>{c.category}</span>
+                      <span>Priority {c.priority}</span>
+                    </div>
+                  </div>
+                  <span className={`monitor-dot ${c.enabled ? "on" : "off"}`}>
+                    {c.enabled ? "LIVE" : "PAUSED"}
+                  </span>
+                </div>
+                <div className="company-url">{c.career_url}</div>
+                <div className="company-card-bottom">
+                  <span>
+                    {c.enabled
+                      ? "Included in scanner"
+                      : "Excluded from scanner"}
+                  </span>
+                  <button
+                    className={c.enabled ? "secondary" : "primary"}
+                    onClick={() => toggle(c)}
+                  >
+                    {c.enabled ? "Pause monitoring" : "Enable monitoring"}
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    </Layout>
+  );
 }

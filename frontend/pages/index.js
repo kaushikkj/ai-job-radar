@@ -11,9 +11,21 @@ const bands = [
 ];
 
 export default function Dashboard() {
-  const [stats,setStats]=useState({}),[jobs,setJobs]=useState([]),[scan,setScan]=useState({}),[location,setLocation]=useState("Hyderabad"),[scoreBand,setScoreBand]=useState("all"),[sort,setSort]=useState("recommended"),[freshness,setFreshness]=useState(""),[loading,setLoading]=useState(false),[message,setMessage]=useState(""),[lastRefresh,setLastRefresh]=useState(null),[scanInterval,setScanInterval]=useState(300);
+  const [stats,setStats]=useState({}),[jobs,setJobs]=useState([]),[scan,setScan]=useState({}),[location,setLocation]=useState("Hyderabad"),[greeting,setGreeting]=useState("Good day"),[scoreBand,setScoreBand]=useState("all"),[sort,setSort]=useState("recommended"),[freshness,setFreshness]=useState(""),[loading,setLoading]=useState(false),[message,setMessage]=useState(""),[lastRefresh,setLastRefresh]=useState(null),[scanInterval,setScanInterval]=useState(300);
   const refreshMs=useRefreshRate(), requestSeq=useRef(0), mounted=useRef(true);
   useEffect(()=>{setLocation(getDefaultLocation()); return ()=>{mounted.current=false}},[]);
+  useEffect(()=>{
+    const updateGreeting=()=>{
+      const hour=new Date().getHours();
+      if(hour>=5 && hour<12) setGreeting("Good morning");
+      else if(hour>=12 && hour<17) setGreeting("Good afternoon");
+      else if(hour>=17 && hour<21) setGreeting("Good evening");
+      else setGreeting("Good night");
+    };
+    updateGreeting();
+    const timer=setInterval(updateGreeting,60000);
+    return()=>clearInterval(timer);
+  },[]);
   const reload=useCallback(async({silent=true}={})=>{const seq=++requestSeq.current;if(!silent)setLoading(true);const band=scoreBand==="all"?[0,100]:scoreBand.split("-").map(Number);const url=new URL(`${API}/jobs`);url.searchParams.set("min_score",band[0]);url.searchParams.set("max_score",band[1]);url.searchParams.set("location",location);url.searchParams.set("sort",sort);url.searchParams.set("limit","100");if(freshness.startsWith("posted:"))url.searchParams.set("posted_since_days",freshness.split(":")[1]);if(freshness.startsWith("added:"))url.searchParams.set("added_since_days",freshness.split(":")[1]);try{const [a,b,c,d]=await Promise.all([fetch(`${API}/stats?_t=${Date.now()}`,{cache:"no-store"}),fetch(url.toString(),{cache:"no-store"}),fetch(`${API}/scan/status?_t=${Date.now()}`,{cache:"no-store"}),fetch(`${API}/settings?_t=${Date.now()}`,{cache:"no-store"})]);if(!a.ok||!b.ok||!c.ok)throw new Error();const [ns,nj,nc]=await Promise.all([a.json(),b.json(),c.json()]);if(!mounted.current||seq!==requestSeq.current)return;setStats(ns);setJobs(Array.isArray(nj)?nj:[]);setScan(nc||{});if(d.ok){const cfg=await d.json();setScanInterval(cfg.scan_interval_seconds||300)}setLastRefresh(new Date())}catch{if(!silent&&mounted.current)setMessage("Could not refresh. Keeping the last successful results.")}finally{if(!silent&&mounted.current)setLoading(false)}},[scoreBand,location,sort,freshness]);
   useEffect(()=>{reload({silent:false})},[reload]);
   useEffect(()=>{if(!refreshMs)return;const t=setInterval(()=>reload({silent:true}),refreshMs);return()=>clearInterval(t)},[refreshMs,reload]);
@@ -24,7 +36,7 @@ export default function Dashboard() {
   return <Layout scanState={scan} onScan={runScan} scanning={false}>
     <section className="page dashboard-page">
       <div className="dashboard-hero">
-        <div><div className="eyebrow">PERSONAL JOB RADAR</div><h1>Good afternoon, Kaushik! <span>👋</span></h1><p>Hyderabad-first opportunities ranked by match, freshness and application priority.</p></div>
+        <div><div className="eyebrow">PERSONAL JOB RADAR</div><h1>{greeting}, Kaushik! <span>👋</span></h1><p>Hyderabad-first opportunities ranked by match, freshness and application priority.</p></div>
         <div className="dashboard-hero-actions"><div className="scan-setting-inline"><span>Career scan</span><select value={scanInterval} onChange={e=>changeScanInterval(e.target.value)}>{[{label:"5m",value:300},{label:"10m",value:600},{label:"15m",value:900},{label:"30m",value:1800},{label:"1h",value:3600}].map(x=><option key={x.value} value={x.value}>{x.label}</option>)}</select></div><button className="primary scan-button" onClick={runScan} disabled={scan.running}>{scan.running?"Scanning…":"↻ Scan now"}</button></div>
       </div>
       {message&&<div className="notice">{message}</div>}
