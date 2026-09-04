@@ -100,7 +100,6 @@ jobs:
 
       - name: Dependency audit
         run: npm audit --audit-level=high
-        continue-on-error: true
 
       - name: Build Next.js application
         env:
@@ -148,7 +147,7 @@ jobs:
           cache-to: type=gha,mode=max,scope=frontend
 
       - name: Scan backend image
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ai-job-radar-backend:${{ github.sha }}
           format: table
@@ -157,7 +156,7 @@ jobs:
           exit-code: "1"
 
       - name: Scan frontend image
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: ai-job-radar-frontend:${{ github.sha }}
           format: table
