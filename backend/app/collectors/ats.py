@@ -2,7 +2,7 @@ import hashlib
 import html
 import json
 import re
-import xml.etree.ElementTree as ET
+from defusedxml import ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 
@@ -37,14 +37,20 @@ def _parse_human_date(value, now=None):
     now = now or datetime.now(timezone.utc)
     text = html.unescape(str(value))
     text = re.sub(r"\s+", " ", text).strip().lower()
-    text = re.sub(r"^(posted date|date posted|posted|published date|published|posted on|published on)\s*[:\-]?\s*", "", text)
+    text = re.sub(
+        r"^(posted date|date posted|posted|published date|published|posted on|published on)\s*[:\-]?\s*",
+        "",
+        text,
+    )
     # Career sites frequently render dates with ordinal suffixes, e.g. August 5th 2026.
     text = re.sub(r"\b(\d{1,2})(st|nd|rd|th)\b", r"\1", text)
     if text in {"today", "just now", "new"}:
         return now
     if text == "yesterday":
         return now - timedelta(days=1)
-    match = re.search(r"(\d+)\s+(minute|minutes|hour|hours|day|days|week|weeks)\s+ago", text)
+    match = re.search(
+        r"(\d+)\s+(minute|minutes|hour|hours|day|days|week|weeks)\s+ago", text
+    )
     if match:
         amount = int(match.group(1))
         unit = match.group(2)
@@ -55,7 +61,17 @@ def _parse_human_date(value, now=None):
         if unit.startswith("week"):
             return now - timedelta(weeks=amount)
         return now - timedelta(days=amount)
-    for fmt in ("%B %d, %Y", "%b %d, %Y", "%B %d %Y", "%b %d %Y", "%d %B %Y", "%d %b %Y", "%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y"):
+    for fmt in (
+        "%B %d, %Y",
+        "%b %d, %Y",
+        "%B %d %Y",
+        "%b %d %Y",
+        "%d %B %Y",
+        "%d %b %Y",
+        "%Y-%m-%d",
+        "%m/%d/%Y",
+        "%d/%m/%Y",
+    ):
         try:
             return datetime.strptime(text, fmt).replace(tzinfo=timezone.utc)
         except ValueError:
@@ -100,7 +116,9 @@ def _description_text(value):
     text = soup.get_text(" ", strip=False)
     # Defensive second pass for double-escaped tags that survived parsing.
     for _ in range(2):
-        if re.search(r"</?(?:p|div|span|br|b|strong|h[1-6]|li|ul|ol)(?:\s[^>]*)?>", text, re.I):
+        if re.search(
+            r"</?(?:p|div|span|br|b|strong|h[1-6]|li|ul|ol)(?:\s[^>]*)?>", text, re.I
+        ):
             text = html.unescape(text)
             text = BeautifulSoup(text, "html.parser").get_text(" ", strip=False)
         else:
@@ -171,9 +189,15 @@ def greenhouse(token, timeout, headers):
                 item.get("absolute_url", ""),
                 description,
                 "Greenhouse",
-                date(item.get("first_published") or item.get("date_posted") or item.get("updated_at")),
+                date(
+                    item.get("first_published")
+                    or item.get("date_posted")
+                    or item.get("updated_at")
+                ),
                 "remote" in location.lower(),
-                "published/ATS" if item.get("first_published") or item.get("date_posted") else "updated_at/ATS",
+                "published/ATS"
+                if item.get("first_published") or item.get("date_posted")
+                else "updated_at/ATS",
             )
         )
     return jobs
@@ -223,14 +247,17 @@ def rss(url, timeout, headers):
             entry.get("link", ""),
             entry.get("summary", "") or "",
             "RSS",
-            date(entry.get("published_parsed")) or date(entry.get("updated_parsed")) or _parse_human_date(entry.get("published")) or _parse_human_date(entry.get("updated")),
+            date(entry.get("published_parsed"))
+            or date(entry.get("updated_parsed"))
+            or _parse_human_date(entry.get("published"))
+            or _parse_human_date(entry.get("updated")),
             "remote"
             in (
-                (entry.get("title", "") or "")
-                + " "
-                + (entry.get("summary", "") or "")
+                (entry.get("title", "") or "") + " " + (entry.get("summary", "") or "")
             ).lower(),
-            "published/RSS" if entry.get("published") or entry.get("published_parsed") else "updated/RSS",
+            "published/RSS"
+            if entry.get("published") or entry.get("published_parsed")
+            else "updated/RSS",
         )
         for entry in feed.entries
     ]
@@ -449,8 +476,14 @@ def _extract_posted(job_data, soup):
     """
     text = soup.get_text(" ", strip=True)
     explicit_patterns = (
-        (r"(?:posted\s*date|date\s*posted)\s*[:\-]?\s*([A-Za-z]{3,9}\s+\d{1,2}(?:st|nd|rd|th)?[,]?\s+\d{4})", "visible Posted Date"),
-        (r"(?:posted\s*date|date\s*posted)\s*[:\-]?\s*(\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3,9}[,]?\s+\d{4})", "visible Posted Date"),
+        (
+            r"(?:posted\s*date|date\s*posted)\s*[:\-]?\s*([A-Za-z]{3,9}\s+\d{1,2}(?:st|nd|rd|th)?[,]?\s+\d{4})",
+            "visible Posted Date",
+        ),
+        (
+            r"(?:posted\s*date|date\s*posted)\s*[:\-]?\s*(\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3,9}[,]?\s+\d{4})",
+            "visible Posted Date",
+        ),
     )
     for pattern, source in explicit_patterns:
         match = re.search(pattern, text, re.I)
@@ -524,11 +557,26 @@ def fetch_single_job(url, timeout, headers, source="Career Site"):
     description = _extract_description(job_data, page)
     location = _extract_location(job_data, page)
     posted_at, posted_at_source = _extract_posted(job_data, page)
-    job_type = _text(job_data.get("employmentType")) if isinstance(job_data, dict) else ""
-    remote = "remote" in (title + " " + location + " " + job_type + " " + description).lower()
+    job_type = (
+        _text(job_data.get("employmentType")) if isinstance(job_data, dict) else ""
+    )
+    remote = (
+        "remote"
+        in (title + " " + location + " " + job_type + " " + description).lower()
+    )
     if not title or len(description) < 100:
         return None
-    return CollectedJob(title, location, response.url, description, source, posted_at, remote, posted_at_source, _extract_company_name(job_data, response.url))
+    return CollectedJob(
+        title,
+        location,
+        response.url,
+        description,
+        source,
+        posted_at,
+        remote,
+        posted_at_source,
+        _extract_company_name(job_data, response.url),
+    )
 
 
 def _extract_title(job_data, soup, fallback):
@@ -568,7 +616,7 @@ def _fetch_sitemap_candidates(base_url, timeout, headers):
     found = []
     for sitemap_url in sitemap_urls:
         try:
-            response = requests.get(
+            response = requests.get(  # nosec B113 - timeout is explicitly bounded to <=10s
                 sitemap_url,
                 timeout=min(timeout, 10),
                 headers=headers,
@@ -639,9 +687,7 @@ def generic(url, timeout, headers):
         href = anchor["href"]
         title = anchor.get_text(" ", strip=True)
 
-        if _looks_like_job_path(_absolute(url, href)) or _looks_like_role(
-            title
-        ):
+        if _looks_like_job_path(_absolute(url, href)) or _looks_like_role(title):
             add_candidate(href, title)
 
     # Some sites put job URLs into JSON/HTML attributes rather than anchors.
@@ -692,9 +738,12 @@ def generic(url, timeout, headers):
                 posted_at, posted_at_source = _extract_posted(job_data, page)
 
                 job_type = _text(job_data.get("employmentType"))
-                remote = "remote" in (
-                    title + " " + location + " " + job_type + " " + description
-                ).lower()
+                remote = (
+                    "remote"
+                    in (
+                        title + " " + location + " " + job_type + " " + description
+                    ).lower()
+                )
 
                 output.append(
                     CollectedJob(
@@ -726,9 +775,7 @@ def generic(url, timeout, headers):
                 continue
 
             location = _extract_location({}, page)
-            remote = "remote" in (
-                title + " " + location + " " + description
-            ).lower()
+            remote = "remote" in (title + " " + location + " " + description).lower()
 
             output.append(
                 CollectedJob(
